@@ -8,58 +8,352 @@
         <title>GISU MONSTER</title>
     </head>
     <body>
-     <header>
-         <nav class="navLeft">
-             <a href="index.html" class="logo">GISU MONSTER</a>
-             <ul class="ulLeft">
-                 <li><a href="#" class="liLeft">Shop Online</a></li>
-                 <li><a href="#" class="liLeft">Stores</a></li>
-                 <li><a href="#" class="liLeft">Projects</a></li>
-             </ul>
-         </nav>
-         <nav class="navRight">
-             <button class="headerButton" id="shipping">Shipping to :KR</button>
-             <button class="headerButton" id="search" onclick="">Search</button>
-             <button class="headerButton" id="bag" onclick="">Bag</button>
-         </nav>
-     </header>
-     <div class="showcase">
-         <div class="showcaseText">
-             GGam ZZac Aa<h1>ShipSsaeh, SSibagr</h1>
-         </div>
-         <div class="showcaseRedLine">
-         </div>
-     </div>
-     <div class="showcase2">
-         <div class="showcase2Text">
-             A gah Rhi<h1>Red Wide Open</h1>
-         </div>
-         <div class="showcaseRedLine2"></div>
-         <div class="showcase2Imgs">
-             <div class="imgcontainer">
-                <div class="black"></div>            
+       
+        <!-- 오른쪽 헤더 토글 시작 -->
+        
+        <!-- 국가 -->
+        <div id="shippingToggle">
+            <p style="font-size:15px;">Change your Shipping country</p>
+            <p style="font-size: 13px;">Shipping to</p>
+            <div class="selectWrapper">
+                <select class="countryList">
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                    <option value="">South Korea (KRW)</option>
+                </select>
+            </div>
+            <button class="Go" style="background: black; color: white; font-weight:100;">Go</button>
+            <p style="font-size: 13px"><strong>Important notice</strong></p>
+            <p style="font-size: 13px; font-weight: 200; width: 290px;margin-bottom: 20px;">If you change your Language, any items currently in your shopping cart will be lost.</p>
+        </div>
+        <style>
+            #shippingToggle{
+                z-index: 999999;
+                background: white;
+                color: black;
+                top: 55px;
+                right: 0;
+                position:fixed;
+                padding: 10px;
+                padding-left: 20px;
+                font-weight: 400;
+                border: 1px solid black;
+                width: 300px;
+            }
+            #shippingToggle button,.selectWrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 300px;
+                border: 1px black solid;
+                border-radius: 20px;
+                margin-bottom: 3px;
+                font-weight: 70;
+                height: 30px;
+                cursor: pointer;
+            }
+            select{
+                border: none;
+                background: transparent;
+                width: 100%;
+                text-align-last: center;
+                /*for firefox*/
+                -moz-appearance: none;
+                /*for chrome*/
+                -webkit-appearance:none;
+            }
+            for IE10
+            select::-ms-expand{
+                display: none;
+            }
+        </style>
+        <!-- 검색 -->
+        <div id="searchToggle">
+            <p>제품 검색</p>
+            <input type="search" placeholder="제품명을 입력하세요">
+        </div>
+        <style>
+            #searchToggle{
+                position: fixed;
+                z-index: 9999999;
+                top:55px;
+                right: 0;
+                width: 300px;
+                background: white;
+                display: flex;
+                flex-direction: column;
+                padding: 0 20px 30px 20px;
+                font-size: 13px;
+            }
+            #searchToggle input{
+                border: 1px solid black;
+                border-radius: 20px ;
+                padding: 10px 10px 10px 20px;
+                width: 100%;
+            }
+        </style>
+        <!-- 쇼핑백 -->
+        <div id="bagToggle">
+            <p style="font-size:12px font-weight:100">쇼핑백</p>
+            <p style="font-size:11px; border-bottom: 1px solid black">0 중 0 개가 보여집니다</p>
+            <div class="sumContainer" style="border-bottom: 1px solid black; margin:0px 10px 0 10px">
+                <p style="font-size:11px;">합계</p>
+                <p style="font-size:12px;"><strong>0원</strong></p>
+            </div>
+            <div class="bagButtonContainer">
+                <button class="bagButton1">쇼핑백 자세히 보기</button>
+                <button class="bagButton2">결제하기</button>
+            </div>
+        </div>
+        <style>
+            #bagToggle{
+                position: fixed;
+                top: 55px;
+                right: 0;
+                z-index: 999999;
+                background: white;
+                width: 345px;
+                box-sizing: border-box;
+            }
+            .sumContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            #bagToggle p {
+                margin: 10px 10px 10px 10px;
+                padding-bottom: 10px;
+            }
+            .bagButtonContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .bagButtonContainer button{
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 8px;
+                margin:15px 5px 15px 5px;
+                cursor: pointer;
+            }
+            .bagButtonContainer button:hover{
+                opacity: 0.5;
+            }
+            .batButton1{
+                width: 120px;
+            }
+            .bagButton2{
+                width: 165px;
+                color: white;
+                background: black;
+            }
+        </style>
+        
+        <!-- 오른쪽 헤더 토글 끝-->
+        <!-- 햄버거 메뉴 시작 -->
+        <div id="hamburger">
+            <div class="onlineshop">온라인샵</div>
+            <div class="store">스토어</div>
+            <div class="project">프로젝트</div>
+            <div class="empty"><br></div>
+            <nav class="threeButtonContainer">
+                <div class="account" onclick="location.href='index.html'">
+                    내 계정
+                </div>
+                <div class="tracking" onclick="location.href='index.html'">
+                    주문 조회
+                </div>
+                <div class="customer" onclick="location.href='index.html'">
+                    고객 센터
+                </div>
+            </nav>
+            <div class="login">
+                <button>로그인</button>
+            </div>
+            <div class="footerIconContainer">
+                <a class="footerIcon" href="https://www.instagram.com/" target="_blank">
+                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 299.98" width="13px" height="13px">
+                     <g id="_그룹_" data-name="&lt;그룹&gt;">
+                         <path id="_컴파운드_패스_" data-name="&lt;컴파운드 패스&gt;" d="M38.52,0h223A38.62,38.62,0,0,1,300,38.52v223A38.6,38.6,0,0,1,261.5,300h-223A38.62,38.62,0,0,1,0,261.5v-223A38.63,38.63,0,0,1,38.52,0Zm180,33.32A13.55,13.55,0,0,0,205,46.85V79.17a13.54,13.54,0,0,0,13.51,13.51h33.9A13.54,13.54,0,0,0,266,79.17V46.85a13.56,13.56,0,0,0-13.51-13.52Zm47.53,93.54H239.69a87.76,87.76,0,0,1,3.86,25.76c0,49.88-41.77,90.34-93.27,90.34S57,202.51,57,152.63a88.09,88.09,0,0,1,3.86-25.76H33.35V253.6a11.93,11.93,0,0,0,11.92,11.9h208.9a11.92,11.92,0,0,0,11.91-11.9ZM150.28,91C117,91,90,117.11,90,149.37s27,58.37,60.24,58.37,60.26-26.15,60.26-58.37S183.56,91,150.28,91Z" transform="translate(0 -0.01)"/>
+                     </g>
+                 </svg>
+             </a>
+            <a class="footerIcon" href="https://www.facebook.com/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+            <a class="footerIcon" href="https://www.tumblr.com/" target="_blank">
+                <svg viewBox="0 0 266.75 454.28" width="13px" height="13px">
+                <path d="M267.49,198.49V355.71q0,20.39,2.34,30c3.14,12.94,10.29,17.19,18.39,23.88,15.15,12.54,63.22,24.15,96.53-3.45L389.38,459c-13.83,16.43-90.82,28.74-127.07,22.5-24.39-4.26-46.09-7.05-63.9-21.1q-25.42-20.06-29.8-62.24-1.34-11.51-1.32-47.43V198.5l-44.67.64V154.3C154,151,210,111.73,221.05,28.87h46.44l1.18,117.4,101.16.65-1.15,52.23-101.19-.66Z" transform="translate(-122.62 -28.87)"/></svg>
+            </a>
+            <a class="footerIcon" href="https://www.pinterest.co.kr/" target="_blank">
+                <svg width="13px" height="13px" viewBox="0 0 533.333 533.333">
+                    <path d="M266.667,0C119.391,0,0,119.391,0,266.667c0,147.275,119.388,266.666,266.667,266.666
+                    c147.275,0,266.667-119.391,266.667-266.666C533.333,119.391,413.942,0,266.667,0z M292.523,356.311
+                    c-24.229-1.882-34.397-13.883-53.388-25.421c-10.448,54.781-23.21,107.302-61.01,134.734
+                    c-11.669-82.795,17.132-144.981,30.505-210.997c-22.804-38.389,2.744-115.643,50.844-96.601
+                    c59.18,23.41-51.25,142.712,22.881,157.613c77.406,15.556,109.004-134.302,61.011-183.035
+                    c-69.354-70.367-201.874-1.604-185.578,99.144c3.966,24.631,29.412,32.103,10.168,66.095c-44.385-9.839-57.63-44.845-55.925-91.517
+                    c2.744-76.393,68.638-129.877,134.733-137.274c83.584-9.356,162.035,30.681,172.867,109.311
+                    C431.826,267.107,381.899,363.223,292.523,356.311z"/>
+                </svg>
+            </a>
+            <a class="footerIcon" href="https://web.wechat.com/" target="_blank">
+                <svg viewBox="0 0 1000 1000" width="13px" height="13px">
+                    <path d="M673.3,342.3c11.3,0,22.4,0.9,33.5,2.1c-30-139.8-179.4-243.6-350-243.6C166.2,100.8,10,230.7,10,395.8C10,491,61.9,569.2,148.8,630l-34.7,104.3l121.3-60.8c43.4,8.5,78.2,17.3,121.5,17.3c10.9,0,21.7-0.5,32.3-1.3c-6.7-23.2-10.7-47.5-10.7-72.8C378.5,465.3,508.6,342.3,673.3,342.3L673.3,342.3z M486.9,248.3c26.2,0,43.4,17.2,43.4,43.3c0,26-17.2,43.4-43.4,43.4c-25.9,0-52-17.4-52-43.4C434.9,265.4,460.9,248.3,486.9,248.3L486.9,248.3z M244.2,335c-26,0-52.2-17.4-52.2-43.4c0-26.1,26.2-43.3,52.2-43.3c26,0,43.3,17.2,43.3,43.3C287.5,317.6,270.2,335,244.2,335L244.2,335z"/>
+                    <path d="M990,612.7C990,474,851.2,361,695.3,361c-165.1,0-295,113.1-295,251.7c0,139,130,251.7,295,251.7c34.5,0,69.4-8.6,104.1-17.3l95.1,52.2l-26.1-86.7C938.1,760.2,990,690.9,990,612.7L990,612.7z M599.7,569.2c-17.2,0-34.7-17.2-34.7-34.7c0-17.3,17.5-34.7,34.7-34.7c26.3,0,43.4,17.4,43.4,34.7C643.1,552.1,626,569.2,599.7,569.2L599.7,569.2z M790.4,569.2c-17.1,0-34.5-17.2-34.5-34.7c0-17.3,17.3-34.7,34.5-34.7c26.1,0,43.4,17.4,43.4,34.7C833.9,552.1,816.5,569.2,790.4,569.2L790.4,569.2z"/>
+                </svg>
+            </a>
+            </div>
+        </div>
+        <!-- 햄버거 메뉴 끝 -->
+         <header>
+             <nav class="navLeft">
+                 <a href="index.html" class="logo">GISU MONSTER</a>
+                 <ul class="ulLeft">
+                     <li><a href="#" class="liLeft">Shop Online</a></li>
+                     <li><a href="#" class="liLeft">Stores</a></li>
+                     <li><a href="#" class="liLeft">Projects</a></li>
+                 </ul>
+             </nav>
+             <nav class="navRight">
+                 <button class="headerButton" id="shipping" onclick="shipping()">
+                 <svg enable-background="new 0 0 139 139" height="24px" id="Checkin" version="1.1" viewBox="0 0 139 139" width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-bottom: -8"><path d="M69.896,6.767v-0.02c-0.134,0-0.265,0.008-0.396,0.008s-0.262-0.008-0.396-0.008v0.02  C42.327,7.193,20.748,29.016,20.748,55.895c0,36.221,42.526,70.601,48.752,75.486c6.227-4.884,48.752-39.266,48.752-75.486  C118.252,29.016,96.674,7.193,69.896,6.767z M69.896,77.036c-14.011,0-25.367-11.354-25.367-25.363  c0-14.013,11.356-25.369,25.367-25.369S95.264,37.66,95.264,51.673C95.264,65.682,83.907,77.036,69.896,77.036z"/></svg>
+                 <span>Shipping to :KR</span>
+                 
+                 </button>
+                 <button class="headerButton" id="search" onclick="search()">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-bottom: -6"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/>
+                 </svg>
+                 <span>Search</span>
+                 
+                 </button>
+                 <button class="headerButton" id="bag" onclick="bag()">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-bottom:-5"><path d="M16 6v-2c0-2.209-1.791-4-4-4s-4 1.791-4 4v2h-5v18h18v-18h-5zm-7-2c0-1.654 1.346-3 3-3s3 1.346 3 3v2h-6v-2zm10 18h-14v-14h3v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h3v14z"/>
+                 </svg>
+                 <span>Bag</span>
+                 </button>
+                 <button class="headerButton" id="hamburgerButton" onclick="ham()">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="margin-bottom: -6"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+                     </svg>
+                 </button>
+             </nav>
+         </header>
+         <div class="showcase">
+             <div class="showcaseText">
+                 GGam ZZac Aa<h1>ShipSsaeh, SSibagr</h1>
              </div>
-             <div class="imgcontainer">
-                <div class="red"></div>
+             <div class="showcaseRedLine">
              </div>
-             <div class="imgcontainer">
-                <div class="yellow"></div>             
+         </div>
+         <div class="showcase2">
+             <div class="showcase2Text">
+                 A gah Rhi<h1>Red Wide Open</h1>
              </div>
-          </div>
-     </div>
-     <div class="showcase3">
-         <div class="showcase3Text">
-             Thru. Thru. Thru.<h1>''Till Dawn Comes</h1>
+             <div class="showcaseRedLine2"></div>
+             <div class="showcase2Img"></div>
          </div>
-         <div class="videoContainer">
-             <video autoplay loop muted>
-                 <source src="vid/gisumonster.mp4">
-             </video>
+         <div class="showcase3">
+             <div class="showcase3Text">
+                 Thru. Thru. Thru.<h1>''Till Dawn Comes</h1>
+             </div>
+             <div class="videoContainer">
+                 <video autoplay loop muted>
+                     <source src="vid/gisumonster.mp4">
+                 </video>
+             </div>
          </div>
-     </div>
-     <footer>
-         <h1>FOOTER</h1>
-     </footer>
-     <script src="main.js"></script>
+         <footer>
+            <div class="footer1">
+                <div class="footerIconContainer">
+                <a class="footerIcon" href="https://www.instagram.com/" target="_blank">
+                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 299.98" width="13px" height="13px">
+                     <g id="_그룹_" data-name="&lt;그룹&gt;">
+                         <path id="_컴파운드_패스_" data-name="&lt;컴파운드 패스&gt;" d="M38.52,0h223A38.62,38.62,0,0,1,300,38.52v223A38.6,38.6,0,0,1,261.5,300h-223A38.62,38.62,0,0,1,0,261.5v-223A38.63,38.63,0,0,1,38.52,0Zm180,33.32A13.55,13.55,0,0,0,205,46.85V79.17a13.54,13.54,0,0,0,13.51,13.51h33.9A13.54,13.54,0,0,0,266,79.17V46.85a13.56,13.56,0,0,0-13.51-13.52Zm47.53,93.54H239.69a87.76,87.76,0,0,1,3.86,25.76c0,49.88-41.77,90.34-93.27,90.34S57,202.51,57,152.63a88.09,88.09,0,0,1,3.86-25.76H33.35V253.6a11.93,11.93,0,0,0,11.92,11.9h208.9a11.92,11.92,0,0,0,11.91-11.9ZM150.28,91C117,91,90,117.11,90,149.37s27,58.37,60.24,58.37,60.26-26.15,60.26-58.37S183.56,91,150.28,91Z" transform="translate(0 -0.01)"/>
+                     </g>
+                 </svg>
+             </a>
+            <a class="footerIcon" href="https://www.facebook.com/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+            <a class="footerIcon" href="https://www.tumblr.com/" target="_blank">
+                <svg viewBox="0 0 266.75 454.28" width="13px" height="13px">
+                <path d="M267.49,198.49V355.71q0,20.39,2.34,30c3.14,12.94,10.29,17.19,18.39,23.88,15.15,12.54,63.22,24.15,96.53-3.45L389.38,459c-13.83,16.43-90.82,28.74-127.07,22.5-24.39-4.26-46.09-7.05-63.9-21.1q-25.42-20.06-29.8-62.24-1.34-11.51-1.32-47.43V198.5l-44.67.64V154.3C154,151,210,111.73,221.05,28.87h46.44l1.18,117.4,101.16.65-1.15,52.23-101.19-.66Z" transform="translate(-122.62 -28.87)"/></svg>
+            </a>
+            <a class="footerIcon" href="https://www.pinterest.co.kr/" target="_blank">
+                <svg width="13px" height="13px" viewBox="0 0 533.333 533.333">
+                    <path d="M266.667,0C119.391,0,0,119.391,0,266.667c0,147.275,119.388,266.666,266.667,266.666
+                    c147.275,0,266.667-119.391,266.667-266.666C533.333,119.391,413.942,0,266.667,0z M292.523,356.311
+                    c-24.229-1.882-34.397-13.883-53.388-25.421c-10.448,54.781-23.21,107.302-61.01,134.734
+                    c-11.669-82.795,17.132-144.981,30.505-210.997c-22.804-38.389,2.744-115.643,50.844-96.601
+                    c59.18,23.41-51.25,142.712,22.881,157.613c77.406,15.556,109.004-134.302,61.011-183.035
+                    c-69.354-70.367-201.874-1.604-185.578,99.144c3.966,24.631,29.412,32.103,10.168,66.095c-44.385-9.839-57.63-44.845-55.925-91.517
+                    c2.744-76.393,68.638-129.877,134.733-137.274c83.584-9.356,162.035,30.681,172.867,109.311
+                    C431.826,267.107,381.899,363.223,292.523,356.311z"/>
+                </svg>
+            </a>
+            <a class="footerIcon" href="https://web.wechat.com/" target="_blank">
+                <svg viewBox="0 0 1000 1000" width="13px" height="13px">
+                    <path d="M673.3,342.3c11.3,0,22.4,0.9,33.5,2.1c-30-139.8-179.4-243.6-350-243.6C166.2,100.8,10,230.7,10,395.8C10,491,61.9,569.2,148.8,630l-34.7,104.3l121.3-60.8c43.4,8.5,78.2,17.3,121.5,17.3c10.9,0,21.7-0.5,32.3-1.3c-6.7-23.2-10.7-47.5-10.7-72.8C378.5,465.3,508.6,342.3,673.3,342.3L673.3,342.3z M486.9,248.3c26.2,0,43.4,17.2,43.4,43.3c0,26-17.2,43.4-43.4,43.4c-25.9,0-52-17.4-52-43.4C434.9,265.4,460.9,248.3,486.9,248.3L486.9,248.3z M244.2,335c-26,0-52.2-17.4-52.2-43.4c0-26.1,26.2-43.3,52.2-43.3c26,0,43.3,17.2,43.3,43.3C287.5,317.6,270.2,335,244.2,335L244.2,335z"/>
+                    <path d="M990,612.7C990,474,851.2,361,695.3,361c-165.1,0-295,113.1-295,251.7c0,139,130,251.7,295,251.7c34.5,0,69.4-8.6,104.1-17.3l95.1,52.2l-26.1-86.7C938.1,760.2,990,690.9,990,612.7L990,612.7z M599.7,569.2c-17.2,0-34.7-17.2-34.7-34.7c0-17.3,17.5-34.7,34.7-34.7c26.3,0,43.4,17.4,43.4,34.7C643.1,552.1,626,569.2,599.7,569.2L599.7,569.2z M790.4,569.2c-17.1,0-34.5-17.2-34.5-34.7c0-17.3,17.3-34.7,34.5-34.7c26.1,0,43.4,17.4,43.4,34.7C833.9,552.1,816.5,569.2,790.4,569.2L790.4,569.2z"/>
+                </svg>
+            </a>
+            </div>
+                <div class="footerTextContainer">
+                <div class="footerText" onclick="location.href='index.html'">고객센터</div>
+                <div class="footerText" onclick="location.href='index.html'">주문 조회</div>  
+                <div class="footerText" onclick="location.href='index.html'">내 계정</div>
+                <div class="footerText" onclick="location.href='index.html'">코드 핑크</div>
+            </div>
+            </div>
+            <div class="footer2">
+                <p>주) 아이아이컴바인드 . 대표자명 : 김한국 . 사업자 번호 : 119-86-38589 . 통신판매신고번호 : 제 2013-서울강남-01840 호 . 주소 : 서울특별시 마포구 어울마당로5길 41 . 전화번호 : 1600-2126 © 2017 GENTLE MONSTER</p>
+            </div>
+         </footer>
+         <script src="main.js"></script>
     </body>
 </html>
