@@ -274,7 +274,7 @@ footer{
     .footerComputer{
         display: none;
     }
-    .svg{
+    svg{
         background:white;
 }
 @media(min-width:1150px){
