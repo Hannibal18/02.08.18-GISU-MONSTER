@@ -274,6 +274,8 @@ footer{
     .footerComputer{
         display: none;
     }
+    .svg{
+        background:white;
 }
 @media(min-width:1150px){
     #shipping svg{
