@@ -9,9 +9,6 @@ ul,a,li{
     list-style: none;
     color: black;
 }
-a:hover{
-    opacity: 0.5;
-}
 
 /* HEADER */
 
@@ -63,11 +60,6 @@ header{
     font-size: 13px;
     font-weight: 100;
 }
-.navRight>button:hover{
-    cursor: pointer;
-    opacity: 0.5;
-}
-
 
 /* SHOWCASE */
 
@@ -78,7 +70,6 @@ header{
     background: url(../img/showcase.jpg) no-repeat;
     background-size: 100% 100%;
     background-position: 60% 50%;
-    cursor:pointer;
     position: relative;
 }
 .showcaseText{
@@ -99,10 +90,6 @@ header{
     position: absolute;
     top: 65px;
     left: 20px;
-}
-.showcaseRedLine:hover{
-    width:300px;
-    transition: 5s;
 }
 
 /* SHOWCASE2 */
@@ -144,6 +131,7 @@ header{
 .showcase3{
     position: relative;
     margin: 0;
+    margin-bottom: -10px;
 }
 .showcase3Text{
     position: absolute;
@@ -161,7 +149,7 @@ video{
 }
 .videoContainer{
 /*    width: 100%;*/
-    max-height: 80vh;
+/*    max-height: 70vh;*/
     overflow: hidden;
 }
 
@@ -189,9 +177,6 @@ footer{
     border-left: 1px solid;
     padding: 15px 30px 15px 30px;
     font-size: 12px;
-}
-.footerText:hover{
-    background:lightgray;
 }
 .footer2{
     font-size: 12px;
@@ -259,6 +244,35 @@ footer{
     .navRight{
         padding-right: 10px;
     }
+    .footerIconContainer{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 8px;
+    }
+    .footerTextContainer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 101%;
+    }
+    .footerText{
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        height: 46px;
+        padding-left: 15px;
+    }
+    .footer2{
+        border-top: 0;
+        padding-left: 10px;
+        font-weight: 400;
+    }
+    .footerComputer{
+        display: none;
+    }
 }
 @media(min-width:1150px){
     #shipping svg{
@@ -267,9 +281,24 @@ footer{
     #hamburgerButton{
         display: none;
     }
-    `
+    a:hover{
+    opacity: 0.5;
+    }
+    .bagButtonContainer button:hover{
+        opacity: 0.5;
+    }
+    .navRight>button:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    .footerText:hover{
+        background:lightgray;
+    }
+    .footerMobile{
+        display: none;
+    }
 }
-@media(max-width:500px){
+@media(max-width:700px){
     #hamburger{
         width: 100%;
     }
